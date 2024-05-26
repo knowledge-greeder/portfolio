@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes spell {
+            0% { color: red; }
+            25% { color: yellow; }
+            50% { color: blue; }
+            75% { color: green; }
+            100% { color: red; }
+        }
+        .spell-animation {
+            animation: spell 5s infinite;
+        }
+        @keyframes spell2 {
+            0% { color: pink; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: white; }
+            100% { color: red; }
+        }
+        .spell2-animation {
+            animation: spell2 5s infinite;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body class="bg-slate-900">
+    <div class="max-w-[1920px] mx-auto">
+        <div class="text-white bg-black">
+            <ul class="flex sm:flex-row flex-col p-5 gap-5 justify-center">
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+                <li>Download Resume</li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-[1320px] mx-auto flex sm:flex-row flex-col">
+        <div class="basis-[45%]">
+            <img src="{{ url_for('static', filename='suite_pic_amrit.jpg') }}" alt="Suite Picture" class="object-scale-down h-90 w-80 pt-10 rounded-full animate-pulse transition-shadow duration-300 cursor-pointer shadow-lg shadow-yellow-400" />
+        </div>
+        <div class="basis-[55%] text-5xl text-red-400 mt-20">
+            <h2 class="text-4xl font-bold mb-4">Hi There,</h2>
+            <h1 class="text-6xl font-bold mb-4">
+                This is <span class="spell-animation">Amritanshu</span>
+                <span class="text-yellow-400">Narayan</span>
+            </h1>
+            <p class="text-xl">
+                I am into <span class="text-yellow-400 spell-animation">DevOps</span>.
+            </p>
+            <div class="mt-10 spell2-animation">
+                <table>
+                    <tr>
+                        <td class="p-5 hover:scale-125 cursor-pointer shadow-lg">
+                            <a href="https://www.instagram.com/a.narayan_is_back?igsh=NWw2N2ViZTB0ODBq">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </td>
+                        <td class="p-5 hover:scale-125 cursor-pointer shadow-lg">
+                            <i class="fa-brands fa-linkedin spell-animation"></i>
+                        </td>
+                        <td class="p-5 hover:scale-125 cursor-pointer shadow-lg duration-1000">
+                            <i class="fa-brands fa-github"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-[1920px] items-center mt-20 border border-orange-800 mx-20">
+        <h1 class="text-red-400 text-4xl text-center mt-5">
+            <b class="spell-animation">A</b><b class="spell2-animation">b</b>
+            <b class="spell-animation">o</b><b class="spell2-animation">u</b>
+            <b class="spell-animation">t</b><b class="spell2-animation">M</b>
+            <b class="spell-animation">e</b>
+        </h1>
+        <div class="flex items-center justify-center w-full">
+            <div class="text-wrap w-[50%] text-center">
+                <p class="text-red-400">
+                    I find strength in moments of reflection and deep thought, allowing
+                    me to explore concepts and solutions that might be overlooked in the
+                    hustle and bustle of group dynamics. My unique perspective and
+                    introspective nature enable me to see connections and possibilities
+                    that others might miss. In the quiet of my own space, I can delve
+                    into projects with unwavering focus, turning abstract ideas into
+                    tangible innovations. While I may work silently, the impact of my
+                    work speaks volumes, driving progress and change in ways both
+                    profound and enduring.
+                </p>
+            </div>
+        </div>
+        <div class="mt-5 flex text-red-400">
+            <div class="w-[50%] text-center">
+                <b class="spell2-animation">Get</b>
+                <b class="spell-animation">to</b>
+                <b class="spell2-animation">Know</b>
+                <b class="spell2-animation">me</b>
+                <b class="spell2-animation">!</b>
+            </div>
+            <div class="w-[50%] text-center">
+                <b class="spell2-animation">Skills</b>
+            </div>
+        </div>
+        <div class="mt-7 flex">
+            <div class="w-[50%] ml-5">
+                <p>Hey its Amritanshu Narayan, DevOps engineer and Python Developer at Geekologix located in Jodhpur and I am working on different versatile projects here. I was ex-Tech Lead of GDSC (Google Developer Student Club) of batch 2023-2024.</p>
+            </div>
+            <div class="w-[50%] text-center mt-7">
+                <b>Skills</b>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
