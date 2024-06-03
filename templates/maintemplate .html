@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes spell {
+      0% { color: red; }
+      25% { color: yellow; }
+      50% { color: blue; }
+      75% { color: green; }
+      100% { color: red; }
+    }
+    .spell-animation { animation: spell 5s infinite; }
+    @keyframes spell2 {
+      0% { color: pink; }
+      25% { color: blue; }
+      50% { color: green; }
+      75% { color: white; }
+      100% { color: red; }
+    }
+    .spell2-animation { animation: spell2 10s infinite; }
+    @keyframes spell3 {
+      0% { color: pink; }
+      50% { color: white; }
+      100% { color: red; }
+    }
+    .spell3-animation { animation: spell3 10s infinite; }
+    @keyframes spell4 {
+      0% { color: red; }
+      50% { color: orange; }
+      100% { color: yellow; }
+    }
+    .spell4-animation { animation: spell4 10s infinite; }
+  </style>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body class="bg-slate-900">
+  <div class="max-w-[1920px] mx-auto">
+    <div class="text-white bg-black">
+      <ul class="flex sm:flex-row flex-col p-5 gap-5 justify-center">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+        <li>Download Resume</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-[1320px] mx-auto flex sm:flex-row flex-col">
+    <div class="basis-[45%]">
+      <img
+        src="{{ url_for('static', filename='suite_pic_amrit.jpg') }}"
+        alt="Suite Picture"
+        class="object-scale-down h-90 w-80 pt-10 rounded-full animate-pulse transition-shadow duration-300 cursor-pointer shadow-lg shadow-yellow-400"
+      />
+    </div>
+    <div class="basis-[55%] text-5xl text-red-400 mt-20">
+      <h2 class="text-4xl font-bold mb-4">Hi There,</h2>
+      <h1 class="text-6xl font-bold mb-4">
+        This is <span class="spell-animation">Amritanshu</span>
+        <span class="text-yellow-400">Narayan</span>
+      </h1>
+      <p class="text-xl">
+        I am into <span class="text-yellow-400 spell-animation">DevOps</span>.
+      </p>
+      <div class="mt-10 spell2-animation">
+        <table>
+          <tr>
+            <td class="p-5 hover:scale-125 cursor-pointer shadow-lg">
+              <a
+                href="https://www.instagram.com/a.narayan_is_back?igsh=NWw2N2ViZTB0ODBq"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </td>
+            <td class="p-5 hover:scale-125 cursor-pointer shadow-lg">
+              <i class="fa-brands fa-linkedin spell-animation"></i>
+            </td>
+            <td
+              class="p-5 hover:scale-125 cursor-pointer shadow-lg duration-1000"
+            >
+              <i class="fa-brands fa-github"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    class="max-w-[1920px] items-center mt-20 border border-orange-800 mx-20 mb-5 rounded-md"
+  >
+    <h1 class="text-red-400 text-4xl text-center mt-5">
+      <b class="spell3-animation">About me</b>
+    </h1>
+    <div class="flex items-center justify-center w-full">
+      <div class="text-wrap w-[50%] text-center">
+        <p class="text-white">
+          I find strength in moments of reflection and deep thought, allowing
+          me to explore concepts and solutions that might be overlooked in the
+          hustle and bustle of group dynamics. My unique perspective and
+          introspective nature enable me to see connections and possibilities
+          that others might miss. In the quiet of my own space, I can delve
+          into projects with unwavering focus, turning abstract ideas into
+          tangible innovations. While I may work silently, the impact of my
+          work speaks volumes, driving progress and change in ways both
+          profound and enduring.
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 flex text-red-400 text-2xl">
+      <div class="w-[50%] text-center">
+        <b class="spell-animation">Get to know me !</b>
+      </div>
+      <div class="w-[50%] text-center">
+        <b class="spell2-animation">Skills</b>
+      </div>
+    </div>
+    <div class="mt-7 flex">
+      <div class="w-[50%] ml-5 mb-5 text-white">
+        <p>
+          Hey its Amritanshu Narayan, DevOps engineer and Python Developer at
+          Geekologix located in Jodhpur and I am working on different
+          versatile projects here. I was ex-Tech Lead of GDSC (Google
+          Developer Student Club) of batch 2023-2024.
+        </p>
+      </div>
+      <div class="w-[50%] text-center mt-2">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 mx-5 text-white"
+        >
+          <div class="border border-grey-200 rounded-full text-wrap "> flask</div>
+          <div class="border border-grey-200 rounded-full text-wrap ">SQL</div>
+          <div class="border border-grey-200 rounded-full text-wrap">DevOps</div>
+          <div class="border border-grey-200 rounded-full text-wrap">AWS</div>
+          <div class="border border-grey-200 rounded-full text-wrap">Cybersecurity</div>
+          <div class="border border-grey-200 rounded-full text-wrap">Web-Dev</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projects text-center mb-5 border border-orange-400 mx-20 mb-5 rounded-md">
+    <h3 class="text-white text-4xl mb-5 spell4-animation mt-5">Projects</h3>
+    <h2 class='text-white'>Let's check out some latest projects I am working on</h2>
+    <div class="relative mt-5">
+      <div id="projects-container" class="max-w-full overflow-hidden">
+        <div id="project1" class="project">
+          <div class="p-4 rounded-lg text-white mx-auto max-w-[50%]">
+            <h3 class="text-xl">DevOps</h3>
+            <p class="text-sm">Here are some of my DevOps project...</p>
+            <div class='flex'>
+              <div class='basis-[49%]'>
+                <div class='vagrant mt-10 h-10 w-[45%] ml-[35%] text-sm rounded-full'>
+                  <img src='static/vagrant icon.png'></img><p class='mt-1 '> Vprofile java project setup manual and automated with vagrant. </p>
+                </div>
+                <div class='bash mt-[125%] h-15 w-[60%] ml-[25%] text-sm rounded-full'>
+                  <img src='static/bash.jpg'></img>
+                  <p>Multi-OS Websetup Scripts and automating day to day admin tasks.</p>
+                </div>
+                <div class="ansible mt-[100%] h-10 w-[45%] ml-[35%] text-sm rounded-full ">
+                  <img src="static/ansible.png">
+                  <p>Continuous Delivery and Configuration Management [Jenkins plus Ansible]
+                  </p>
+                </div>
+                <div class="kuber mt-[100%] h-10 w-[45%] ml-[35%] text-sm rounded-full">
+                  <img src="static/kubernetes.png">
+                  <p>Vprofile Project deployment on Kubernetes</p>
+                </div>
+              </div>
+              <div class='basis-[0%] ml-[2%]  h-[2000px] mb-5 overflow-hidden mt-3 shadow-yellow-400 border shadow-sm'>
+                <img src='static/line.png'></img>
+              </div>
+              <div class='basis-[49%]'>
+                <div class='AWS mt-[45%]  ml-[25%] text-sm rounded-full'>
+                  <img src='static/aws.png' class="h-[20%] w-[55%]"></img>
+                  <ul class='list-disc mt-2'><li>AWS Cloud For Project Set Up Lift & Shift</li>
+                  <li>Re-Architecting Web App on AWS Cloud [PAAS & SAAS]</li>
+                <li>Vprofile on Beanstalk & RDS</li>
+              <li>Code Commit, Code Build & Code Pipeline</li>
+            <li>CI & CD on AWS Cloud for Vprofile Project</li>
+          <li>Beanstalk, RDS, CodePipeline etc</li></ul>
+                </div>
+                <div class="jenkins h-5 w-[45%] mt-[70%] ml-[25%] text-sm tex-wrap rounded-full">
+                  <img src="static/jenkins-pic.png"></img>
+                  <p>Continuous Integration Using Jenkins, Nexus, Sonarqube & Slack
+                  </p>
+                </div>
+                <div class="docker mt-[130%] h-20 w-[45%] ml-[25%]">
+                  <img src="static/docker-compose.jpg">
+                  <p>Containerizing microservice project based on java</p>
+                </div>
+                <div class="terraform mt-[130%] h-20 w-[45%] ml-[25%]">
+                  <img src="static/terra.png">
+                  <p>
+                   Many terraform for AWS Cloud automation
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="project2" class="project hidden">
+          <div class="border border-orange-400 p-4 rounded-full text-white animate-pulse transition-shadow duration-300 cursor-pointer shadow-sm shadow-yellow-400 mx-auto max-w-[50%]">
+            <h3 class="text-xl">Cybersecurity</h3>
+            <p class="text-sm">Details about Cybersecurity project...</p>
+          </div>
+        </div>
+        <!-- Add more project cards here -->
+      </div>
+      <button id="next-btn" class="mt-5 text-white bg-blue-500 p-2 rounded">Next</button>
+    </div>
+  </div>
+  <script>
+    let currentProject = 0;
+    const projects = document.querySelectorAll('.project');
+    const nextBtn = document.getElementById('next-btn');
+
+    nextBtn.addEventListener('click', () => {
+      projects[currentProject].classList.add('hidden');
+      currentProject = (currentProject + 1) % projects.length;
+      projects[currentProject].classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
